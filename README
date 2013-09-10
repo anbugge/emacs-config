@@ -1,0 +1,5 @@
+
+This repository contains shared Emacs configuration files and scripts used by the HW Tools group. It may or may not be useful for others.
+
+The file "example.emacs" should be used as a template for updating your local .emacs file to work with this setup.
+
