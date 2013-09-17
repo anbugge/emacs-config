@@ -43,6 +43,16 @@
 (desktop-save-mode 1)
 
 
+;; "pull" the next line onto the end of the current line, compressing whitespace.
+(defun pull-next-line() 
+  (interactive) 
+  (move-end-of-line 1) 
+  (kill-line)
+  (just-one-space))
+
+(global-set-key (kbd "M-J") 'pull-next-line)
+
+
 ;;;;    CEDET is now included in Emacs
 
 ;; Load CEDET.
