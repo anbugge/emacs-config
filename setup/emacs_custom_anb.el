@@ -73,6 +73,21 @@
 (global-set-key (kbd "C-c . j") 'semantic-ia-fast-jump)
 (global-set-key [S-mouse-2] 'semantic-ia-fast-mouse-jump)
 
+;;;
+;;; JSHint Mode
+;;;
+(add-to-list 'load-path  (concat script_path "jshint-mode"))
+(require 'flymake-jshint)
+(add-hook 'javascript-mode-hook
+          (lambda () (flymake-mode t)))
+
+;; Turns on flymake for all files which have a flymake mode
+(add-hook 'find-file-hook 'flymake-find-file-hook)
+
+;;;
+;;; Editorconfig
+;;;
+(load "editorconfig")
 
 ;;;
 ;;; ECB

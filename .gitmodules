@@ -1,3 +1,6 @@
 [submodule "scripts/ecb"]
 	path = scripts/ecb
 	url = https://github.com/alexott/ecb.git
+[submodule "scripts/jshint-mode"]
+	path = scripts/jshint-mode
+	url = git://github.com/daleharvey/jshint-mode.git
