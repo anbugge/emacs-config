@@ -16,6 +16,11 @@
 (setq perl-indent-level 4)
 (setq python-indent 4)
 
+;;; Prevent unwanted indentation caused by 'extern "C" {'
+(add-hook 'c-mode-common-hook
+	  (lambda()
+	    (c-set-offset 'inextern-lang 0)))
+
 ;;; This tells emacs to show the line number in each modeline. 
 ;;; The modeline is the bar across the bottom of each buffer (except the 
 ;;; minibuffer, the line of text at the very bottom of the emacs 
